@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meetup #01 Genesis - DEF CON Group Casablanca">
+  <title>Meetup #01 — Genesis | DEF CON Group Casablanca</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <img src="images/logo.png" alt="DEF CON Group Casablanca" onerror="this.style.display='none'">
+        <span class="navbar-logo-text">DEFCON GROUP CASABLANCA</span>
+      </div>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html#schedule">SCHEDULE</a></li>
+        <li><a href="index.html#sponsors">SPONSORS</a></li>
+        <li><a href="index.html#editions" class="active">EDITIONS</a></li>
+      </ul>
+      <div class="navbar-toggle" id="navbarToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div style="margin-bottom: 0.5rem;">
+        <a href="index.html#editions" style="font-size:0.82rem; color:var(--color-text-dim);">&larr; All Editions</a>
+      </div>
+      <div class="section-header">
+        <div class="hero-edition" style="margin-bottom:1rem;">Meetup #01</div>
+        <h1 class="section-title" style="font-size:2rem;">Genesis</h1>
+        <p class="section-subtitle" style="margin-top:0.75rem;">
+          February 13<sup>th</sup>, 2026 &nbsp;|&nbsp; 18h00 – 22h30 &nbsp;|&nbsp; OASIS Café, Casablanca
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section class="section" style="padding-top: 1.5rem;">
+    <div class="container">
+      <div class="editions-group-label">Program</div>
+
+      <div class="schedule-container">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Talk</th>
+              <th>Speaker</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="row-header">
+              <td colspan="3">18:00 – 18:45 &nbsp;|&nbsp; Welcome &amp; Introduction</td>
+            </tr>
+
+            <tr>
+              <td class="col-time"><span class="schedule-time">18:45 – 19:15</span></td>
+              <td><span class="schedule-title">Recovering Flight Data From The React2Shell Crash</span></td>
+              <td class="col-speaker">Saad El Jebbari</td>
+            </tr>
+
+            <tr class="row-break">
+              <td colspan="3">Break &amp; Networking</td>
+            </tr>
+
+            <tr>
+              <td class="col-time"><span class="schedule-time">19:30 – 20:00</span></td>
+              <td><span class="schedule-title">Malware Configuration Extraction And Other Stuff</span></td>
+              <td class="col-speaker">Zakariaa Hamid</td>
+            </tr>
+
+            <tr class="row-break">
+              <td colspan="3">Break &amp; Networking</td>
+            </tr>
+
+            <tr>
+              <td class="col-time"><span class="schedule-time">20:15 – 20:45</span></td>
+              <td><span class="schedule-title">IoT Security 101: How Cybercriminals Turn Your Smart Devices Into Weapons</span></td>
+              <td class="col-speaker">Mohammed Amine Moulay</td>
+            </tr>
+
+            <tr class="row-break">
+              <td colspan="3">Break &amp; Networking</td>
+            </tr>
+
+            <tr>
+              <td class="col-time"><span class="schedule-time">21:00 – 21:30</span></td>
+              <td><span class="schedule-title">Shadow Boxing Or How To Fight The New Windows Security Boundary</span></td>
+              <td class="col-speaker">Mouad Abouhali</td>
+            </tr>
+
+            <tr class="row-closing">
+              <td colspan="3">Closing Remarks</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Videos (to be added after the event) -->
+  <section class="section">
+    <div class="container">
+      <div class="editions-group-label">Videos</div>
+
+      <div class="archive-empty">
+        Videos will be added after the event.
+        <!--
+        Replace this block with video cards once available:
+
+        <div class="archive-grid" style="display:grid">
+          <div class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <div class="video-title">Talk Title</div>
+              <div class="video-speaker">Speaker Name</div>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Photos (to be added after the event) -->
+  <section class="section">
+    <div class="container">
+      <div class="editions-group-label">Photos</div>
+
+      <div class="archive-empty">
+        Photos will be added after the event.
+        <!--
+        Replace this block with gallery items once available:
+
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('images/edition-1/photo-1.jpg')">
+            <img src="images/edition-1/photo-1.jpg" alt="Caption">
+            <div class="gallery-overlay"><div class="gallery-title">Caption</div></div>
+          </div>
+        </div>
+        -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-terminal">
+        <p>root@defcon-casa:~# whoami &gt; anonymous</p>
+        <p>root@defcon-casa:~# location &gt; Casablanca, Morocco</p>
+        <p>root@defcon-casa:~# status &gt; <span style="color:var(--color-green-hi)">online</span></p>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Conference</h4>
+          <ul>
+            <li><a href="index.html#schedule">Schedule</a></li>
+            <li><a href="index.html#sponsors">Sponsors</a></li>
+            <li><a href="index.html#editions">Editions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://ma.linkedin.com/company/defcon-group-casablanca" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">X (Twitter)</a></li>
+            <li><a href="#" target="_blank">Discord</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#">Code of Conduct</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 DEF CON Group Casablanca — All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navbarToggle');
+    const menu   = document.getElementById('navbarMenu');
+    if (toggle) toggle.addEventListener('click', () => menu.classList.toggle('active'));
+
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>

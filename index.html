@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DEF CON Group Casablanca - Meetup #01 Genesis">
+  <title>DEF CON Group Casablanca</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <img src="images/logo.png" alt="DEF CON Group Casablanca" onerror="this.style.display='none'">
+        <span class="navbar-logo-text">DEFCON GROUP CASABLANCA</span>
+      </div>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="#home" class="active">HOME</a></li>
+        <li><a href="#schedule">SCHEDULE</a></li>
+
+        <li><a href="#editions">EDITIONS</a></li>
+      </ul>
+      <div class="navbar-toggle" id="navbarToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-edition">Meetup #01</div>
+      <h1 class="hero-glitch">DEFCON GROUP CASABLANCA</h1>
+      <div class="hero-tagline">Genesis</div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="icon">&#9679;</span>
+          February 13<sup>th</sup>, 2026 &nbsp;|&nbsp; 18h00 – 22h30
+        </div>
+        <div class="hero-meta-item">
+          <span class="icon">&#9675;</span>
+          OASIS Café, 10 Bd Ibnou Sina, Casablanca 20250
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#schedule" class="btn">View Schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Schedule</h2>
+        <p class="section-subtitle">Meetup #01 – Genesis &nbsp;|&nbsp; February 13<sup>th</sup>, 2026</p>
+      </div>
+
+      <div class="schedule-container">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Talk</th>
+              <th>Speaker</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- Welcome row - full width -->
+            <tr class="row-header">
+              <td colspan="3">18:00 – 18:45 &nbsp;|&nbsp; Welcome &amp; Introduction</td>
+            </tr>
+
+            <!-- Talk 1 -->
+            <tr>
+              <td class="col-time"><span class="schedule-time">18:45 – 19:15</span></td>
+              <td><span class="schedule-title">Recovering Flight Data From The React2Shell Crash</span></td>
+              <td class="col-speaker">Saad El Jebbari</td>
+            </tr>
+
+            <!-- Break -->
+            <tr class="row-break">
+              <td colspan="3">Break &amp; Networking</td>
+            </tr>
+
+            <!-- Talk 2 -->
+            <tr>
+              <td class="col-time"><span class="schedule-time">19:30 – 20:00</span></td>
+              <td><span class="schedule-title">Malware Configuration Extraction And Other Stuff</span></td>
+              <td class="col-speaker">Zakariaa Hamid</td>
+            </tr>
+
+            <!-- Break -->
+            <tr class="row-break">
+              <td colspan="3">Break &amp; Networking</td>
+            </tr>
+
+            <!-- Talk 3 -->
+            <tr>
+              <td class="col-time"><span class="schedule-time">20:15 – 20:45</span></td>
+              <td><span class="schedule-title">IoT Security 101: How Cybercriminals Turn Your Smart Devices Into Weapons</span></td>
+              <td class="col-speaker">Mohammed Amine Moulay</td>
+            </tr>
+
+            <!-- Break -->
+            <tr class="row-break">
+              <td colspan="3">Break &amp; Networking</td>
+            </tr>
+
+            <!-- Talk 4 -->
+            <tr>
+              <td class="col-time"><span class="schedule-time">21:00 – 21:30</span></td>
+              <td><span class="schedule-title">Shadow Boxing Or How To Fight The New Windows Security Boundary</span></td>
+              <td class="col-speaker">Mouad Abouhali</td>
+            </tr>
+
+            <!-- Closing row - full width -->
+            <tr class="row-closing">
+              <td colspan="3">Closing Remarks</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Editions -->
+  <section id="editions" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Editions</h2>
+        <p class="section-subtitle">Past and upcoming meetups</p>
+      </div>
+
+      <div class="editions-group-label">Upcoming</div>
+      <div class="archive-grid">
+        <div class="archive-card" onclick="location.href='edition-1.html'">
+          <div class="archive-year">Meetup #01 — Genesis</div>
+          <p class="archive-description">February 13<sup>th</sup>, 2026 &nbsp;|&nbsp; 18h00 – 22h30</p>
+          <p class="archive-description">OASIS Café, Casablanca</p>
+          <a href="edition-1.html" class="btn" style="margin-top:0.75rem;width:100%;text-align:center;">View Details</a>
+        </div>
+      </div>
+
+      <div class="editions-group-label" style="margin-top: 3rem;">Past Editions</div>
+      <div class="archive-empty">
+        No past editions yet — this is our first meetup.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-terminal">
+        <p>root@defcon-casa:~# whoami &gt; anonymous</p>
+        <p>root@defcon-casa:~# location &gt; Casablanca, Morocco</p>
+        <p>root@defcon-casa:~# status &gt; <span style="color:var(--color-green-hi)">online</span></p>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Conference</h4>
+          <ul>
+            <li><a href="#schedule">Schedule</a></li>
+
+            <li><a href="#editions">Editions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://ma.linkedin.com/company/defcon-group-casablanca" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">X (Twitter)</a></li>
+            <li><a href="#" target="_blank">Discord</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#">Code of Conduct</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 DEF CON Group Casablanca — All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navbarToggle');
+    const menu   = document.getElementById('navbarMenu');
+    if (toggle) toggle.addEventListener('click', () => menu.classList.toggle('active'));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = a.getAttribute('href');
+        if (t !== '#' && document.querySelector(t)) {
+          e.preventDefault();
+          document.querySelector(t).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
