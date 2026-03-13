@@ -19,8 +19,6 @@
       </div>
       <ul class="navbar-menu" id="navbarMenu">
         <li><a href="index.html">HOME</a></li>
-        <li><a href="index.html#schedule">SCHEDULE</a></li>
-        <li><a href="index.html#sponsors">SPONSORS</a></li>
         <li><a href="index.html#editions" class="active">EDITIONS</a></li>
       </ul>
       <div class="navbar-toggle" id="navbarToggle">
@@ -112,6 +110,81 @@
     </div>
   </section>
 
+  <!-- Talks & Resources -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="editions-group-label">Talks &amp; Resources</div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <!-- Talk 1 -->
+        <div class="speaker-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <div>
+              <div class="speaker-name">Recovering Flight Data From The React2Shell Crash</div>
+              <div class="speaker-title">Saad El Jebbari &nbsp;|&nbsp; 18:45 – 19:15</div>
+            </div>
+            <a href="https://github.com/DefconGroupCasablanca/talks/blob/main/01-meetup-genesis/react2shell/react2shell.pdf" target="_blank" class="btn" style="white-space:nowrap;">Slides (PDF)</a>
+          </div>
+          <p class="speaker-bio">A deep dive into CVE-2025-55182 (React2Shell), a critical vulnerability in React Server. The talk walks through how the bug works, demonstrates exploitation via a live flight protocol app, and covers remediation. Slides were built with reveal.js; a Docker-based proof-of-concept app is included in the repository.</p>
+          <div style="margin-top:0.75rem;">
+            <div style="font-size:0.78rem; color:var(--color-green); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.4rem;">Additional Reading</div>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.25rem;">
+              <li><a href="https://react2shell.com/" target="_blank" style="font-size:0.82rem;">react2shell.com — Official vulnerability site</a></li>
+              <li><a href="https://github.com/lachlan2k/React2Shell-CVE-2025-55182-original-poc" target="_blank" style="font-size:0.82rem;">Original PoC — lachlan2k/React2Shell-CVE-2025-55182-original-poc</a></li>
+              <li><a href="https://github.com/l4rm4nd/CVE-2025-55182" target="_blank" style="font-size:0.82rem;">Exploit experiments — l4rm4nd/CVE-2025-55182</a></li>
+              <li><a href="https://gist.github.com/maple3142/48bc9393f45e068cf8c90ab865c0f5f3" target="_blank" style="font-size:0.82rem;">maple3142's analysis gist</a></li>
+              <li><a href="https://medium.com/profusion-engineering/react2shell-critical-vulnerability-in-react-server-explained-with-technical-details-of-code-b75a84e76a1c" target="_blank" style="font-size:0.82rem;">Profusion Engineering — Technical breakdown (Medium)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Talk 2 -->
+        <div class="speaker-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <div>
+              <div class="speaker-name">Malware Configuration Extraction And Other Stuff</div>
+              <div class="speaker-title">Zakariaa Hamid &nbsp;|&nbsp; 19:30 – 20:00</div>
+            </div>
+            <a href="https://github.com/DefconGroupCasablanca/talks/blob/main/01-meetup-genesis/malwareconf/malware_configuration_extraction_and_other_stuff.pdf" target="_blank" class="btn" style="white-space:nowrap;">Slides (PDF)</a>
+          </div>
+          <p class="speaker-bio">Covers techniques for extracting embedded configuration data from malware samples — including unpacking, memory analysis, and decryption approaches — along with other reverse engineering tidbits.</p>
+        </div>
+
+        <!-- Talk 3 -->
+        <div class="speaker-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <div>
+              <div class="speaker-name">IoT Security 101: How Cybercriminals Turn Your Smart Devices Into Weapons</div>
+              <div class="speaker-title">Mohammed Amine Moulay &nbsp;|&nbsp; 20:15 – 20:45</div>
+            </div>
+            <a href="https://github.com/DefconGroupCasablanca/talks/blob/main/01-meetup-genesis/iot101/DefCon_Morocco_IoT_FINAL_With_Demoss.pdf" target="_blank" class="btn" style="white-space:nowrap;">Slides (PDF)</a>
+          </div>
+          <p class="speaker-bio">An introductory tour of IoT attack surfaces — from insecure defaults and unencrypted protocols to botnet recruitment. The talk includes live demos powered by the companion scanning tool below.</p>
+          <div style="margin-top:0.75rem;">
+            <div style="font-size:0.78rem; color:var(--color-green); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.4rem;">Companion Project</div>
+            <ul style="list-style:none;">
+              <li><a href="https://github.com/Moiraguard/moiraguard-eye-o-tea-scanner" target="_blank" style="font-size:0.82rem;">Moiraguard Eye-O-Tea Scanner</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Talk 4 -->
+        <div class="speaker-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <div>
+              <div class="speaker-name">Shadow Boxing Or How To Fight The New Windows Security Boundary</div>
+              <div class="speaker-title">Mouad Abouhali &nbsp;|&nbsp; 21:00 – 21:30</div>
+            </div>
+            <a href="https://github.com/DefconGroupCasablanca/talks/blob/main/01-meetup-genesis/wap/me_talk_wap.pdf" target="_blank" class="btn" style="white-space:nowrap;">Slides (PDF)</a>
+          </div>
+          <p class="speaker-bio">Examines the evolving Windows security boundary — exploring how modern mitigations (VBS, Hypervisor-Protected Code Integrity, Secure Kernel) shift the attack surface and what that means for offensive and defensive security practitioners.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Videos (to be added after the event) -->
   <section class="section">
     <div class="container">
@@ -180,8 +253,6 @@
         <div class="footer-section">
           <h4>Conference</h4>
           <ul>
-            <li><a href="index.html#schedule">Schedule</a></li>
-            <li><a href="index.html#sponsors">Sponsors</a></li>
             <li><a href="index.html#editions">Editions</a></li>
           </ul>
         </div>
