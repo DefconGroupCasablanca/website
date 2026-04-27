@@ -19,8 +19,8 @@
       </div>
       <ul class="navbar-menu" id="navbarMenu">
         <li><a href="#home" class="active">HOME</a></li>
-        <li><a href="#schedule">SCHEDULE</a></li>
         <li><a href="#editions">EDITIONS</a></li>
+        <li><a href="#schedule">SCHEDULE</a></li>
       </ul>
       <div class="navbar-toggle" id="navbarToggle">
         <span></span><span></span><span></span>
@@ -39,79 +39,6 @@
     </div>
   </section>
 
-  <!-- Schedule -->
-  <section id="schedule" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Schedule</h2>
-        <p class="section-subtitle">Next meetup</p>
-      </div>
-
-      <div class="schedule-container">
-        <table class="schedule-table">
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Talk</th>
-              <th>Speaker</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr class="row-header">
-              <td colspan="3">Meetup #02 &nbsp;|&nbsp; Continuum</td>
-            </tr>
-
-            <tr class="row-header">
-              <td colspan="3">16:00 – 16:30 &nbsp;|&nbsp; Welcome &amp; Introduction</td>
-            </tr>
-
-            <tr>
-              <td class="col-time"><span class="schedule-time">16:30 – 17:10</span></td>
-              <td><span class="schedule-title">VMSurgeon-GDB: Tampering with the Windows kernel through VMware's GDB stub</span></td>
-              <td class="col-speaker">Mouad Abouhali</td>
-            </tr>
-
-            <tr class="row-break">
-              <td colspan="3">Break &amp; Networking</td>
-            </tr>
-
-            <tr>
-              <td class="col-time"><span class="schedule-time">17:30 – 18:30</span></td>
-              <td><span class="schedule-title">Following the Bytecode of Smart Contracts</span></td>
-              <td class="col-speaker">Souhail Mssassi</td>
-            </tr>
-
-            <tr class="row-break">
-              <td colspan="3">Break &amp; Networking</td>
-            </tr>
-
-            <tr>
-              <td class="col-time"><span class="schedule-time">18:45 – 19:15</span></td>
-              <td><span class="schedule-title">How to Think Like a Pentester: A Real-World Approach Through a CTF (Smol - TryHackMe)</span></td>
-              <td class="col-speaker">Imad Arouzer</td>
-            </tr>
-
-            <tr class="row-break">
-              <td colspan="3">Break &amp; Networking</td>
-            </tr>
-
-            <tr>
-              <td class="col-time"><span class="schedule-time">19:30 – 20:00</span></td>
-              <td><span class="schedule-title">PromptLock Unpacked: Detecting LLM-Embedded Malware Before It Detects You</span></td>
-              <td class="col-speaker">Othmane Mrichcha</td>
-            </tr>
-
-            <tr class="row-closing">
-              <td colspan="3">20:00 – 20:30 &nbsp;|&nbsp; Closing remarks</td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
   <!-- Editions -->
   <section id="editions" class="section">
     <div class="container">
@@ -121,15 +48,18 @@
       </div>
 
       <div class="editions-group-label">Upcoming</div>
-      <div class="archive-grid">
-        <div class="archive-card" onclick="location.href='edition-2.html'">
-          <div class="archive-year">Meetup #02 — Continuum</div>
-          <a href="edition-2.html" class="btn" style="margin-top:0.75rem;width:100%;text-align:center;">View Details</a>
-        </div>
+      <div id="upcomingEditionsBlock" class="archive-empty">
+        No upcoming editions announced yet — stay tuned.
       </div>
 
       <div class="editions-group-label" style="margin-top: 3rem;">Past Editions</div>
       <div class="archive-grid">
+        <div class="archive-card" onclick="location.href='edition-2.html'">
+          <div class="archive-year">Meetup #02 — Continuum</div>
+          <p class="archive-description">April 25<sup>th</sup>, 2026 &nbsp;|&nbsp; 16h00 – 20h30</p>
+          <p class="archive-description">Boost Coffee Ghandi, 255 Bd Ghandi, Casablanca</p>
+          <a href="edition-2.html" class="btn" style="margin-top:0.75rem;width:100%;text-align:center;">View Details</a>
+        </div>
         <div class="archive-card" onclick="location.href='edition-1.html'">
           <div class="archive-year">Meetup #01 — Genesis</div>
           <p class="archive-description">February 13<sup>th</sup>, 2026 &nbsp;|&nbsp; 18h00 – 22h30</p>
@@ -138,6 +68,19 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Schedule</h2>
+        <p class="section-subtitle">Next meetup</p>
+      </div>
+      <div class="archive-empty">
+        No meetup scheduled yet — stay tuned.
+      </div>
     </div>
   </section>
 
@@ -155,7 +98,7 @@
         <div class="footer-section">
           <h4>Conference</h4>
           <ul>
-            <li><a href="#schedule">Schedule</a></li>
+            <li id="footerScheduleLink"><a href="#schedule">Schedule</a></li>
             <li><a href="#editions">Editions</a></li>
           </ul>
         </div>
@@ -164,14 +107,7 @@
           <ul>
             <li><a href="https://ma.linkedin.com/company/defcon-group-casablanca" target="_blank">LinkedIn</a></li>
             <li><a href="#" target="_blank">X (Twitter)</a></li>
-            <li><a href="#" target="_blank">Discord</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Info</h4>
-          <ul>
-            <li><a href="#">Code of Conduct</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="https://discord.gg/jPJ2K6yevQ" target="_blank">Discord</a></li>
           </ul>
         </div>
       </div>
@@ -187,6 +123,18 @@
     const toggle = document.getElementById('navbarToggle');
     const menu   = document.getElementById('navbarMenu');
     if (toggle) toggle.addEventListener('click', () => menu.classList.toggle('active'));
+
+    const upcomingEditionsBlock = document.getElementById('upcomingEditionsBlock');
+    const hasUpcomingEditions = upcomingEditionsBlock && upcomingEditionsBlock.querySelector('.archive-card');
+    const scheduleSection = document.getElementById('schedule');
+    const scheduleNavLink = document.querySelector('.navbar-menu a[href="#schedule"]');
+    const footerScheduleLink = document.getElementById('footerScheduleLink');
+
+    if (!hasUpcomingEditions && scheduleSection) {
+      scheduleSection.style.display = 'none';
+      if (scheduleNavLink) scheduleNavLink.parentElement.style.display = 'none';
+      if (footerScheduleLink) footerScheduleLink.style.display = 'none';
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {

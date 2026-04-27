@@ -39,15 +39,12 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 
-  /* Circuit board background */
+  /* Subtle glow background */
   background-image:
-    /* grid lines */
-    repeating-linear-gradient(0deg,   transparent, transparent 59px, rgba(0, 180, 60, 0.06) 60px),
-    repeating-linear-gradient(90deg,  transparent, transparent 59px, rgba(0, 180, 60, 0.06) 60px),
-    /* glow pools */
     radial-gradient(ellipse at 15% 20%,  rgba(0, 100, 30, 0.18) 0%, transparent 55%),
     radial-gradient(ellipse at 85% 75%,  rgba(0, 80,  25, 0.14) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%,  rgba(0, 50,  15, 0.1)  0%, transparent 70%);
+  background-attachment: fixed;
 }
 
 a { color: var(--color-green-hi); text-decoration: none; transition: color 0.2s; }
@@ -288,6 +285,7 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
   border: 1px solid var(--color-border);
   background: var(--color-bg-card);
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .schedule-table {
@@ -468,6 +466,7 @@ td.col-speaker {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  border-radius: 8px;
 }
 
 .archive-card:hover {
@@ -512,6 +511,7 @@ td.col-speaker {
   border: 1px solid var(--color-border);
   background: var(--color-bg-card);
   transition: border-color 0.2s;
+  border-radius: 8px;
 }
 
 .gallery-item:hover { border-color: var(--color-border-hi); }
@@ -524,25 +524,6 @@ td.col-speaker {
 }
 
 .gallery-item:hover img { transform: scale(1.04); }
-
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  opacity: 0;
-  transition: opacity 0.2s;
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-}
-
-.gallery-item:hover .gallery-overlay { opacity: 1; }
-
-.gallery-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
 
 /* Lightbox */
 .lightbox {
@@ -593,6 +574,7 @@ td.col-speaker {
   background: var(--color-bg-card);
   padding: var(--gap);
   transition: border-color 0.2s;
+  border-radius: 8px;
 }
 .speaker-card:hover { border-color: var(--color-border-hi); }
 .speaker-name { font-size: 1.05rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.2rem; }
@@ -613,6 +595,7 @@ td.col-speaker {
   padding: 1rem;
   margin-bottom: var(--gap);
   font-size: 0.78rem;
+  border-radius: 8px;
 }
 .footer-terminal p { color: var(--color-text-dim); margin: 0.2rem 0; }
 
