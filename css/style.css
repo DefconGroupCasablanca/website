@@ -1,22 +1,29 @@
 /* ============================================
    DEFCON GROUP CASABLANCA
-   Dark Circuit-Board Aesthetic
+   Black & Red Tactical HUD Aesthetic
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap');
+
 :root {
-  --color-bg:        #060d07;
-  --color-bg-card:   rgba(0, 20, 8, 0.7);
-  --color-border:    rgba(0, 180, 60, 0.25);
-  --color-border-hi: rgba(0, 220, 80, 0.5);
+  --color-bg:        #080808;
+  --color-bg-card:   rgba(15, 0, 0, 0.7);
+  --color-border:    rgba(200, 0, 0, 0.25);
+  --color-border-hi: rgba(220, 30, 30, 0.6);
 
-  --color-green:     #3aad5a;
-  --color-green-hi:  #5fcc7a;
+  --color-red:       #cc1a1a;
+  --color-red-hi:    #e83030;
 
-  --color-text:      #e8f0e9;
-  --color-text-dim:  #8aaa90;
-  --color-text-mute: #4a6a50;
+  /* Legacy aliases so edition pages still work */
+  --color-green:     #cc1a1a;
+  --color-green-hi:  #e83030;
 
-  --font-mono: 'Courier New', 'Consolas', monospace;
+  --color-text:      #f0e8e8;
+  --color-text-dim:  #a08080;
+  --color-text-mute: #5a3a3a;
+
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-mono:    'Share Tech Mono', 'Courier New', monospace;
 
   --gap:   1.5rem;
   --gap-lg: 2.5rem;
@@ -33,27 +40,27 @@ html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-mono);
+
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
 
-  /* Subtle glow background */
   background-image:
-    radial-gradient(ellipse at 15% 20%,  rgba(0, 100, 30, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 75%,  rgba(0, 80,  25, 0.14) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%,  rgba(0, 50,  15, 0.1)  0%, transparent 70%);
+    radial-gradient(ellipse at 15% 20%,  rgba(120, 0, 0, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 75%,  rgba(100, 0, 0, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%,  rgba(80,  0, 0, 0.07) 0%, transparent 70%);
   background-attachment: fixed;
 }
 
-a { color: var(--color-green-hi); text-decoration: none; transition: color 0.2s; }
+a { color: var(--color-red-hi); text-decoration: none; transition: color 0.2s; }
 a:hover { color: #fff; }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--color-text);
 }
 
@@ -78,15 +85,16 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 }
 
 .section-title {
-  font-size: 1.6rem;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
   color: var(--color-text);
   margin-bottom: 0.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .section-title::before {
   content: '> ';
-  color: var(--color-green);
+  color: var(--color-red);
 }
 
 .section-subtitle {
@@ -98,7 +106,7 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
    NAVBAR
    ============================================ */
 .navbar {
-  background-color: rgba(6, 13, 7, 0.95);
+  background-color: rgba(8, 8, 8, 0.97);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -127,10 +135,10 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 }
 
 .navbar-logo-text {
-  font-size: 1rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   color: var(--color-text);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -154,7 +162,7 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 .navbar-menu a:hover,
 .navbar-menu a.active {
   color: var(--color-text);
-  border-bottom-color: var(--color-green);
+  border-bottom-color: var(--color-red);
 }
 
 .navbar-toggle {
@@ -182,13 +190,23 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
   overflow: hidden;
 }
 
-/* extra circuit glow on hero */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 60%, rgba(0, 140, 50, 0.12) 0%, transparent 65%);
+    radial-gradient(ellipse at 50% 60%, rgba(150, 0, 0, 0.10) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Corner bracket decorations on hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 2rem; left: 2rem;
+  width: 40px; height: 40px;
+  border-top: 2px solid var(--color-red-hi);
+  border-left: 2px solid var(--color-red-hi);
   pointer-events: none;
 }
 
@@ -198,10 +216,30 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
   max-width: 860px;
 }
 
+/* HUD status badge */
+.hud-status {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--color-red-hi);
+  text-align: right;
+  line-height: 1.6;
+  border: 1px solid var(--color-border-hi);
+  padding: 0.4rem 0.75rem;
+  z-index: 3;
+}
+
+.hud-status-title {
+  color: var(--color-text-dim);
+  font-size: 0.6rem;
+}
+
 .hero-edition {
   display: inline-block;
   border: 1px solid var(--color-border-hi);
-  color: var(--color-green-hi);
+  color: var(--color-red-hi);
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -210,20 +248,20 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 }
 
 .hero-glitch {
-  font-size: 3.2rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 5rem;
   color: var(--color-text);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   margin-bottom: 0.5rem;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
-  color: var(--color-green-hi);
-  letter-spacing: 0.06em;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-red-hi);
+  letter-spacing: 0.14em;
   margin-bottom: 2rem;
-  font-weight: 600;
 }
 
 .hero-meta {
@@ -243,7 +281,7 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 }
 
 .hero-meta-item .icon {
-  color: var(--color-green);
+  color: var(--color-red);
 }
 
 .hero-cta {
@@ -259,22 +297,21 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
   border: 1px solid var(--color-border-hi);
-  color: var(--color-green-hi);
+  color: var(--color-red-hi);
   background: transparent;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn:hover {
-  background: var(--color-green);
-  border-color: var(--color-green);
-  color: #000;
+  background: var(--color-red);
+  border-color: var(--color-red);
+  color: #fff;
   transform: translateY(-1px);
 }
 
@@ -293,14 +330,13 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
   border-collapse: collapse;
 }
 
-/* Column widths */
 .schedule-table th:nth-child(1),
 .schedule-table td.col-time  { width: 160px; }
 .schedule-table th:nth-child(3),
 .schedule-table td.col-speaker { width: 220px; }
 
 .schedule-table thead {
-  background: rgba(0, 180, 60, 0.12);
+  background: rgba(180, 0, 0, 0.12);
   border-bottom: 1px solid var(--color-border-hi);
 }
 
@@ -308,7 +344,7 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
   padding: 1rem 1.25rem;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-green-hi);
+  color: var(--color-red-hi);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-align: left;
@@ -325,33 +361,29 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 }
 
 .schedule-table tbody tr:hover {
-  background: rgba(0, 180, 60, 0.04);
+  background: rgba(180, 0, 0, 0.04);
 }
 
-/* Time cell */
 td.col-time .schedule-time {
-  color: var(--color-green-hi);
+  color: var(--color-red-hi);
   font-weight: 700;
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* Title cell */
 .schedule-title {
   color: var(--color-text);
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-/* Speaker cell */
 td.col-speaker {
   color: var(--color-text-dim);
   font-size: 0.9rem;
 }
 
-/* Welcome / full-width header row */
 .schedule-table tr.row-header td {
-  background: rgba(0, 180, 60, 0.15);
+  background: rgba(180, 0, 0, 0.15);
   border-bottom: 1px solid var(--color-border-hi);
   text-align: center;
   font-weight: 700;
@@ -361,20 +393,18 @@ td.col-speaker {
   padding: 1.1rem;
 }
 
-/* Break & Networking row */
 .schedule-table tr.row-break td {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.35);
   text-align: center;
   font-style: italic;
-  color: var(--color-green);
+  color: var(--color-red);
   font-size: 0.85rem;
   padding: 0.65rem;
-  border-color: rgba(0, 180, 60, 0.15);
+  border-color: rgba(180, 0, 0, 0.15);
 }
 
-/* Closing row */
 .schedule-table tr.row-closing td {
-  background: rgba(0, 180, 60, 0.12);
+  background: rgba(180, 0, 0, 0.12);
   text-align: center;
   font-weight: 700;
   color: var(--color-text);
@@ -435,7 +465,7 @@ td.col-speaker {
    ============================================ */
 .editions-group-label {
   font-size: 0.8rem;
-  color: var(--color-green);
+  color: var(--color-red);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin: var(--gap-lg) 0 var(--gap) 0;
@@ -457,6 +487,7 @@ td.col-speaker {
   gap: var(--gap);
 }
 
+/* HUD corner-bracket card */
 .archive-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -466,18 +497,59 @@ td.col-speaker {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-radius: 8px;
+  position: relative;
+}
+
+/* Corner brackets */
+.archive-card::before,
+.archive-card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--color-red-hi);
+  border-style: solid;
+  transition: border-color 0.2s;
+}
+.archive-card::before {
+  top: -1px; left: -1px;
+  border-width: 2px 0 0 2px;
+}
+.archive-card::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 2px 2px 0;
 }
 
 .archive-card:hover {
   border-color: var(--color-border-hi);
 }
 
+/* Upcoming card highlight */
+.archive-card.upcoming {
+  border-color: rgba(220, 30, 30, 0.35);
+  background: rgba(30, 0, 0, 0.55);
+}
+.archive-card.upcoming:hover {
+  border-color: var(--color-red-hi);
+}
+
 .archive-year {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-green-hi);
-  letter-spacing: 0.06em;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-red-hi);
+  letter-spacing: 0.1em;
+}
+
+.archive-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--color-red-hi);
+  color: var(--color-red-hi);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  align-self: flex-start;
 }
 
 .archive-description {
@@ -511,7 +583,6 @@ td.col-speaker {
   border: 1px solid var(--color-border);
   background: var(--color-bg-card);
   transition: border-color 0.2s;
-  border-radius: 8px;
 }
 
 .gallery-item:hover { border-color: var(--color-border-hi); }
@@ -530,7 +601,7 @@ td.col-speaker {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0,0,0,0.97);
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -574,11 +645,28 @@ td.col-speaker {
   background: var(--color-bg-card);
   padding: var(--gap);
   transition: border-color 0.2s;
-  border-radius: 8px;
+  position: relative;
+}
+.speaker-card::before,
+.speaker-card::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--color-red-hi);
+  border-style: solid;
+}
+.speaker-card::before {
+  top: -1px; left: -1px;
+  border-width: 2px 0 0 2px;
+}
+.speaker-card::after {
+  bottom: -1px; right: -1px;
+  border-width: 0 2px 2px 0;
 }
 .speaker-card:hover { border-color: var(--color-border-hi); }
-.speaker-name { font-size: 1.05rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.2rem; }
-.speaker-title { font-size: 0.82rem; color: var(--color-green-hi); margin-bottom: 0.75rem; }
+.speaker-name { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 0.06em; color: var(--color-text); margin-bottom: 0.2rem; }
+.speaker-title { font-size: 0.82rem; color: var(--color-red-hi); margin-bottom: 0.75rem; }
 .speaker-bio { font-size: 0.88rem; color: var(--color-text-dim); line-height: 1.5; }
 
 /* ============================================
@@ -595,7 +683,6 @@ td.col-speaker {
   padding: 1rem;
   margin-bottom: var(--gap);
   font-size: 0.78rem;
-  border-radius: 8px;
 }
 .footer-terminal p { color: var(--color-text-dim); margin: 0.2rem 0; }
 
@@ -630,15 +717,16 @@ td.col-speaker {
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
-  .hero-glitch { font-size: 2rem; }
-  .hero-tagline { font-size: 1.1rem; }
+  .hero-glitch { font-size: 3rem; }
+  .hero-tagline { font-size: 1.4rem; }
+  .hud-status { display: none; }
 
   .navbar-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0; right: 0;
-    background: rgba(6, 13, 7, 0.98);
+    background: rgba(8, 8, 8, 0.99);
     flex-direction: column;
     padding: var(--gap);
     border-bottom: 1px solid var(--color-border);
@@ -660,6 +748,6 @@ td.col-speaker {
 
 @media (max-width: 480px) {
   .container { padding: 0 1rem; }
-  .hero-glitch { font-size: 1.6rem; }
+  .hero-glitch { font-size: 2.2rem; }
   .section { padding: 2.5rem 0; }
 }

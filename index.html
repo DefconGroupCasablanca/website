@@ -30,6 +30,11 @@
 
   <!-- Hero -->
   <section id="home" class="hero">
+    <div class="hud-status">
+      <div class="hud-status-title">[ SIGNAL RECEIVED ]</div>
+      <div>CHANNEL: DG-CASA</div>
+      <div>STATUS: <span style="color:#e83030">ACTIVE</span></div>
+    </div>
     <div class="hero-content">
       <h1 class="hero-glitch">DEFCON GROUP CASABLANCA</h1>
       <div class="hero-tagline">Casablanca, Morocco</div>
@@ -48,8 +53,17 @@
       </div>
 
       <div class="editions-group-label">Upcoming</div>
-      <div id="upcomingEditionsBlock" class="archive-empty">
-        No upcoming editions announced yet — stay tuned.
+      <div id="upcomingEditionsBlock" class="archive-grid">
+        <div class="archive-card upcoming">
+          <div class="archive-badge">Next Up</div>
+          <div class="archive-year">Meetup #03 — NEXUS</div>
+          <p class="archive-description">June 13<sup>th</sup>, 2026 &nbsp;|&nbsp; 16h00 &rarr; 21h00</p>
+          <p class="archive-description">Casablanca &nbsp;|&nbsp; Location details coming soon</p>
+          <p class="archive-description" style="margin-top:0.5rem;font-style:italic;font-size:0.83rem;">
+            After Genesis set things in motion, and Continuum kept it going — NEXUS is about bringing those threads together.
+          </p>
+          <a href="#schedule" class="btn" style="margin-top:0.75rem;width:100%;text-align:center;">View Schedule</a>
+        </div>
       </div>
 
       <div class="editions-group-label" style="margin-top: 3rem;">Past Editions</div>
@@ -76,11 +90,35 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Schedule</h2>
-        <p class="section-subtitle">Next meetup</p>
+        <p class="section-subtitle">Meetup #03 — NEXUS &nbsp;|&nbsp; June 13<sup>th</sup>, 2026</p>
       </div>
-      <div class="archive-empty">
-        No meetup scheduled yet — stay tuned.
+
+      <div class="schedule-container">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Talk</th>
+              <th>Speaker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-header">
+              <td colspan="3">16:00 – 16:30 &nbsp;|&nbsp; Welcome &amp; Introduction</td>
+            </tr>
+            <tr class="row-break">
+              <td colspan="3">Talks &amp; schedule — coming soon</td>
+            </tr>
+            <tr class="row-closing">
+              <td colspan="3">~21:00 &nbsp;|&nbsp; Closing remarks &amp; Networking</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+
+      <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:var(--color-text-mute);">
+        &gt; Speaker lineup will be announced closer to the date.
+      </p>
     </div>
   </section>
 
@@ -91,7 +129,7 @@
       <div class="footer-terminal">
         <p>root@defcon-casa:~# whoami &gt; anonymous</p>
         <p>root@defcon-casa:~# location &gt; Casablanca, Morocco</p>
-        <p>root@defcon-casa:~# status &gt; <span style="color:var(--color-green-hi)">online</span></p>
+        <p>root@defcon-casa:~# status &gt; <span style="color:var(--color-red-hi)">online</span></p>
       </div>
 
       <div class="footer-content">
