@@ -130,7 +130,7 @@ p { color: var(--color-text-dim); margin-bottom: 0.75rem; }
 }
 
 .navbar-logo img {
-  height: 36px;
+  height: 72px;
   object-fit: contain;
 }
 
